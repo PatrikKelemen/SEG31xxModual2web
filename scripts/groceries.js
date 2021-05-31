@@ -119,19 +119,19 @@ function restrictListProducts(prods, restriction, organicRequirement) {
 	for (let i=0; i<prods.length; i+=1) {
 		if (!organicRequirement || prods[i].organic){
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name + " $" +prods[i].price);
+			product_names.push(prods[i].name );
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name + " $" +prods[i].price);
+			product_names.push(prods[i].name );
 		}
 		else if ((restriction == "LactoseIntolerant") && (prods[i].lactoseIntolerant == true)){
-			product_names.push(prods[i].name + " $" +prods[i].price);
+			product_names.push(prods[i].name);
 		}
 		else if ((restriction == "NutFree") && (prods[i].nutFree == true)){
-			product_names.push(prods[i].name + " $" +prods[i].price);
+			product_names.push(prods[i].name );
 		}
 		else if (restriction == "None"){
-			product_names.push(prods[i].name + " $" +prods[i].price);
+			product_names.push(prods[i].name);
 		}}
 	}
 	
@@ -149,4 +149,13 @@ function getTotalPrice(chosenProducts) {
 		}
 	}
 	return totalPrice;
+}
+
+function price(chosenProduct){
+		for (let i=0; i<products.length; i+=1) {
+		if (chosenProduct==products[i].name) {
+			return products[i].price;
+		}
+	}
+	
 }
