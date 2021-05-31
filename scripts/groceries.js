@@ -20,6 +20,56 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.00
+	},{
+		name: "Cheese",
+		vegetarian: true,
+		glutenFree: true,
+		price: 5.99
+	},
+	{
+		name: "Beef",
+		vegetarian: false,
+		glutenFree: true,
+		price: 12.35
+	},{
+		name: "Milk",
+		vegetarian: true,
+		glutenFree: true,
+		price: 5.99
+	},
+	{
+		name: "Onion",
+		vegetarian: true,
+		glutenFree: true,
+		price: 1.35
+	},
+	{
+		name: "Chips",
+		vegetarian: true,
+		glutenFree: false,
+		price: 14.00
+	},{
+		name: "Chocolate",
+		vegetarian: true,
+		glutenFree: true,
+		price: 21.99
+	},
+	{
+		name: "Apple",
+		vegetarian: true,
+		glutenFree: true,
+		price: 3.35
+	},{
+		name: "Carrot",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.99
+	},
+	{
+		name: "Apple Pie",
+		vegetarian: true,
+		glutenFree: false,
+		price: 23.35
 	}
 ];
 	
