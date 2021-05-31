@@ -113,25 +113,26 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts(prods, restriction, organicRequirement) {
 	prods.sort(function(a, b){return a.price-b.price});
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
+		if (!organicRequirement || prods[i].organic){
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name + " " +prods[i].price);
+			product_names.push(prods[i].name + " $" +prods[i].price);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name + " " +prods[i].price);
+			product_names.push(prods[i].name + " $" +prods[i].price);
 		}
 		else if ((restriction == "LactoseIntolerant") && (prods[i].lactoseIntolerant == true)){
-			product_names.push(prods[i].name + " " +prods[i].price);
+			product_names.push(prods[i].name + " $" +prods[i].price);
 		}
 		else if ((restriction == "NutFree") && (prods[i].nutFree == true)){
-			product_names.push(prods[i].name + " " +prods[i].price);
+			product_names.push(prods[i].name + " $" +prods[i].price);
 		}
 		else if (restriction == "None"){
-			product_names.push(prods[i].name + " " +prods[i].price);
-		}
+			product_names.push(prods[i].name + " $" +prods[i].price);
+		}}
 	}
 	
 	
