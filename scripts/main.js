@@ -64,11 +64,11 @@ function populateListProductChoices(slct1, slct2) {
 		checkbox.name = "product";
 		checkbox.value = productName;
 		s2.appendChild(checkbox);
-		
+		var productText = productName + " $" +price(productName);
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.appendChild(document.createTextNode(productText));
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
@@ -96,7 +96,8 @@ function selectedItems(){
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
+			
+			para.appendChild(document.createTextNode(ele[i].value + " $" +price(ele[i].value)));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
