@@ -21,8 +21,21 @@ function openInfo(evt, tabName) {
 	evt.currentTarget.className += " active";
 
 }
-
-
+/*
+function restrictListProduct (list, restriction) {
+	var optionArray;
+	for (i = 0; i < list.length; i++) {
+		if (restriction = "GlutenFree" && list[i].glutenFree){optionArray.push(list[i])}
+		else if (restriction = "Vegetarian" && list[i].vegetarian){optionArray.push(list[i])}
+		else if (restriction = "LactoseIntolerant" && list[i].lactoseIntolerant){optionArray.push(list[i])}
+		else if (restriction = "NutFree" && list[i].nutFree){optionArray.push(list[i])}
+		else if (restriction ="None"){optionArray.push(list[i])}
+		else if (restriction =""){optionArray.push(list[i])}
+		else {optionArray.push("error")}
+		
+	}
+	return optionArray;
+}*/
 	
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
@@ -61,6 +74,8 @@ function populateListProductChoices(slct1, slct2) {
 		s2.appendChild(document.createElement("br"));    
 	}
 }
+
+
 	
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
